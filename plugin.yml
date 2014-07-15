@@ -1,0 +1,7 @@
+name: Spinalchat
+main: com.spinalcraft.spinalchat.Spinalchat
+version: 1.0
+
+depend: [Spinalpack, dynmap, Essentials]
+
+commands:
