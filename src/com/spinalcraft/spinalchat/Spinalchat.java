@@ -1,5 +1,8 @@
 package com.spinalcraft.spinalchat;
 
+import main.java.com.spinalcraft.spinalpack.Co;
+import main.java.com.spinalcraft.spinalpack.Spinalpack;
+
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.event.EventHandler;
@@ -8,10 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.dynmap.DynmapWebChatEvent;
 
-
 import com.earth2me.essentials.Essentials;
-import com.spinalcraft.spinalpack.Co;
-import com.spinalcraft.spinalpack.Spinalpack;
 
 public class Spinalchat extends JavaPlugin implements Listener{
 	private Essentials ess;
