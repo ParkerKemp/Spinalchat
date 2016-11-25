@@ -19,7 +19,6 @@ public class Spinalchat extends SpinalcraftPlugin implements Listener{
 	public void onEnable(){
 		console = Bukkit.getConsoleSender();
 		
-		console.sendMessage(ChatColor.BLUE + "Spinalchat online!");
 		getServer().getPluginManager().registerEvents((Listener)this,  this);
 
 		ess = (Essentials)Bukkit.getServer().getPluginManager().getPlugin("Essentials");
