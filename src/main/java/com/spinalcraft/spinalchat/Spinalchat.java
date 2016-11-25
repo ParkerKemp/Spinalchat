@@ -9,7 +9,7 @@ import org.bukkit.event.Listener;
 import org.dynmap.DynmapWebChatEvent;
 
 import com.earth2me.essentials.Essentials;
-import com.spinalcraft.spinalpack.SpinalcraftPlugin;
+import com.spinalcraft.skull.SpinalcraftPlugin;
 
 public class Spinalchat extends SpinalcraftPlugin implements Listener{
 	private Essentials ess;
