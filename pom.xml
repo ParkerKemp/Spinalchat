@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 	<groupId>com.spinalcraft</groupId>
 	<artifactId>Spinalchat</artifactId>
-	<version>1.1.0</version>
-	<name>Spinalchat</name>
+	<version>${projectVersion}</version>
+	<name>${projectName}</name>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.javadoc.skip>true</maven.javadoc.skip>
 	</properties>
-	<url>http://github.com/ParkerKemp/Spinalchat</url>
+	<url>http://github.com/ParkerKemp/${projectName}</url>
 	<repositories>
 		<repository>
 			<id>spinalcraft-repo</id>
@@ -63,7 +63,13 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>Spinalchat</finalName>
+		<finalName>${projectName}</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources-filtered</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -73,6 +79,24 @@
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<phase>initialize</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<files>
+								<file>src/main/resources/mvn.properties</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
